@@ -14,25 +14,25 @@
     <title>Document</title>
 </head>
 <body>
-    <div class="container">
+    <div class="container background-form">
         <div class="row">
             <section class='content'>
                 <div class="paciente">
-                    <h3 class="header-form">Formulário de Cadastro</h3>
+                    <h3 class="header-form">Cadastro de Pacientes</h3>
                     <div class="personal-info">
                         <form action="">
-                            Nome:<input type="name" class="form-control">
-                            Sobrenome:<input type="last_name" class="form-control">
-                            Data de nascimento:<input type="date" id="datepicker" class="form-control" placeholder="Ex.: dd/mm/aaaa">
-                            Gênero:<select id="gender" name="gender" class="form-control">
+                            <p>Nome</p><input type="name" class="form-control">
+                            <p>Sobrenome:</p> <input type="last_name" class="form-control">
+                            <p>Data de nascimento:</p> <input type="date" id="datepicker" class="form-control" placeholder="Ex.: dd/mm/aaaa">
+                            <p>Gênero:</p> <select id="gender" name="gender" class="form-control">
                                 <option value="">Selecione</option>
                                 <option value="male">Masculino</option>
                                 <option value="female">Feminino</option>
                                 <option value="other">Outro</option>                    
                             </select>
-                            CPF:<input type="text" name="cpf" class="form-control cpf-mask" placeholder="Ex.: 000.000.000-00" pattern="\d{3}\.\d{3}\.\d{3}-\d{2}" maxlength="11">
-                            RG:<input type="text" name="rg" class="form-control cpf-mask" placeholder="Ex.: 000.000.000-0" maxlength="10">
-                            UF:<select name="uf" id="uf" class="form-control">
+                            <p>CPF:</p><input type="text" name="cpf" class="form-control cpf-mask" placeholder="Ex.: 000.000.000-00" pattern="\d{3}\.\d{3}\.\d{3}-\d{2}" maxlength="11">
+                            <p>RG:</p><input type="text" name="rg" class="form-control cpf-mask" placeholder="Ex.: 000.000.000-0" maxlength="10">
+                            <p>UF:</p><select name="uf" id="uf" class="form-control">
                                 <option value="">Selecione</option>
                                 <option value="AC">AC</option>
                                 <option value="AL">AL</option>
@@ -62,10 +62,10 @@
                                 <option value="SP">SP</option>
                                 <option value="TO">TO</option>
                             </select>
-                            Email:<input type="email" id="email" name="email" class="form-control">
-                            Celular:<input type="text" name="celphone" class="form-control cel-sp-mask" placeholder="Ex.: (00) 00000-0000">
-                            Telefone:<input type="text" name="telephone" class="form-control phone-ddd-mask" placeholder="Ex.: (00) 0000-0000">
-                            Convênio:<select id="health_insurance" name="health_insurance" class="form-control">
+                            <p>Email:</p><input type="email" id="email" name="email" class="form-control">
+                            <p>Celular:</p><input type="text" name="celphone" class="form-control cel-sp-mask" placeholder="Ex.: (00) 00000-0000">
+                            <p>Telefone:</p><input type="text" name="telephone" class="form-control phone-ddd-mask" placeholder="Ex.: (00) 0000-0000">
+                            <p>Convênio:</p><select id="health_insurance" name="health_insurance" class="form-control">
                                 <option value="">Selecione</option>
                                 <option value="male">Amil</option>
                                 <option value="male">Bradesco</option>
@@ -75,8 +75,8 @@
                                 <option value="other">Sul América</option>
                                 <option value="other">Unimed</option>
                                 </select>
-                                Número do cartão<input type="number" class="form-control">
-                                Validade<input type="date" class="form-control">
+                            <p>Número do cartão</p><input type="number" class="form-control">
+                            <p>Validade</p><input type="date" class="form-control">
                         </form>
                     </div>
                 </div>
