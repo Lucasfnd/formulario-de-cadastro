@@ -3,72 +3,97 @@
 <head>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap-theme.min.css" integrity="sha384-6pzBo3FDv/PJ8r2KRkGHifhEocL+1X2rVCTTkUfGk7/0pbek5mMa1upzvWbrUbOZ" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="js/calendar.js">
+    <link rel="stylesheet" href="css/style.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
 </head>
 <body>
-    <section class='content'>
-        <div class="paciente">
-            <h3>Formulário de Cadastro</h3>
-            <form action="">
-                Nome:<input type="name" class="form-control">
-                Sobrenome:<input type="last_name" class="form-control">
-                Data de nascimento:<input type="text" class="form-control" placeholder="Ex.: dd/mm/aaaa" data-mask="00/00/0000" maxlength="10" autocomplete="off">
-                Gênero:<select id="gender" class="form-control">
-                    <option value="male">Masculino</option>
-                    <option value="female">Feminino</option>
-                    <option value="other">Outro</option>                    
-                  </select>
-                  CPF:<input type="text" class="form-control cpf-mask" placeholder="Ex.: 000.000.000-00">
-                  RG:<input type="text" class="form-control cpf-mask" placeholder="Ex.: 000.000.000-00">
-                  UF:<select name="uf" id="uf" class="form-control">
-                    <option value="">Selecione</option>
-                    <option value="AC">AC</option>
-                    <option value="AL">AL</option>
-                    <option value="AM">AM</option>
-                    <option value="AP">AP</option>
-                    <option value="BA">BA</option>
-                    <option value="CE">CE</option>
-                    <option value="DF">DF</option>
-                    <option value="ES">ES</option>
-                    <option value="GO">GO</option>
-                    <option value="MA">MA</option>
-                    <option value="MG">MG</option>
-                    <option value="MS">MS</option>
-                    <option value="MT">MT</option>
-                    <option value="PA">PA</option>
-                    <option value="PB">PB</option>
-                    <option value="PE">PE</option>
-                    <option value="PI">PI</option>
-                    <option value="PR">PR</option>
-                    <option value="RJ">RJ</option>
-                    <option value="RN">RN</option>
-                    <option value="RS">RS</option>
-                    <option value="RO">RO</option>
-                    <option value="RR">RR</option>
-                    <option value="SC">SC</option>
-                    <option value="SE">SE</option>
-                    <option value="SP">SP</option>
-                    <option value="TO">TO</option>
-                 </select>
-                 Email:<input type="email" id="email" name="email" class="form-control">
-                 Celular:<input type="text" class="form-control cel-sp-mask" placeholder="Ex.: (00) 00000-0000">
-                 Telefone:<input type="text" class="form-control phone-ddd-mask" placeholder="Ex.: (00) 0000-0000">
-                 Convênio:<select id="health_insurance" class="form-control">
-                    <option value="male">Unimed</option>
-                    <option value="female">Amil</option>
-                    <option value="other">Intermédica</option>
-                    <option value="other">AAAA</option>
-                    <option value="other">BBBB</option>
-                  </select>
-                  Número do cartão<input type="number" class="form-control">
-                  Validade<input type="date" class="form-control">
-
-            </form>
+    <div class="container">
+        <div class="row">
+            <section class='content'>
+                <div class="paciente">
+                    <h3 class="header-form">Formulário de Cadastro</h3>
+                    <div class="personal-info">
+                        <form action="">
+                            Nome:<input type="name" class="form-control">
+                            Sobrenome:<input type="last_name" class="form-control">
+                            Data de nascimento:<input type="date" id="datepicker" class="form-control" placeholder="Ex.: dd/mm/aaaa">
+                            Gênero:<select id="gender" name="gender" class="form-control">
+                                <option value="">Selecione</option>
+                                <option value="male">Masculino</option>
+                                <option value="female">Feminino</option>
+                                <option value="other">Outro</option>                    
+                            </select>
+                            CPF:<input type="text" name="cpf" class="form-control cpf-mask" placeholder="Ex.: 000.000.000-00" pattern="\d{3}\.\d{3}\.\d{3}-\d{2}" maxlength="11">
+                            RG:<input type="text" name="rg" class="form-control cpf-mask" placeholder="Ex.: 000.000.000-0" maxlength="10">
+                            UF:<select name="uf" id="uf" class="form-control">
+                                <option value="">Selecione</option>
+                                <option value="AC">AC</option>
+                                <option value="AL">AL</option>
+                                <option value="AM">AM</option>
+                                <option value="AP">AP</option>
+                                <option value="BA">BA</option>
+                                <option value="CE">CE</option>
+                                <option value="DF">DF</option>
+                                <option value="ES">ES</option>
+                                <option value="GO">GO</option>
+                                <option value="MA">MA</option>
+                                <option value="MG">MG</option>
+                                <option value="MS">MS</option>
+                                <option value="MT">MT</option>
+                                <option value="PA">PA</option>
+                                <option value="PB">PB</option>
+                                <option value="PE">PE</option>
+                                <option value="PI">PI</option>
+                                <option value="PR">PR</option>
+                                <option value="RJ">RJ</option>
+                                <option value="RN">RN</option>
+                                <option value="RS">RS</option>
+                                <option value="RO">RO</option>
+                                <option value="RR">RR</option>
+                                <option value="SC">SC</option>
+                                <option value="SE">SE</option>
+                                <option value="SP">SP</option>
+                                <option value="TO">TO</option>
+                            </select>
+                            Email:<input type="email" id="email" name="email" class="form-control">
+                            Celular:<input type="text" name="celphone" class="form-control cel-sp-mask" placeholder="Ex.: (00) 00000-0000">
+                            Telefone:<input type="text" name="telephone" class="form-control phone-ddd-mask" placeholder="Ex.: (00) 0000-0000">
+                            Convênio:<select id="health_insurance" name="health_insurance" class="form-control">
+                                <option value="">Selecione</option>
+                                <option value="male">Amil</option>
+                                <option value="male">Bradesco</option>
+                                <option value="male">GreenLine</option>
+                                <option value="female">Intermédica</option>
+                                <option value="other">Prevent Senior</option>
+                                <option value="other">Sul América</option>
+                                <option value="other">Unimed</option>
+                                </select>
+                                Número do cartão<input type="number" class="form-control">
+                                Validade<input type="date" class="form-control">
+                        </form>
+                    </div>
+                </div>
+            </section>
+            <div class="btn-form">
+                <a href="http://www.google.com">
+                    <button class="btn btn-success btn-lg btn-send" type="submit">
+                        Cadastrar
+                    </button>
+                </a>
+                <a href="http://www.google.com">
+                    <button class="btn btn-primary btn-lg" type="submit">
+                    Editar Cadastros
+                    </button>
+                </a>
+            </div>
         </div>
-    </section>
+    </div>
 </body>
 </html>

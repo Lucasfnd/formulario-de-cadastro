@@ -1,0 +1,27 @@
+.header-form{
+    text-align: center;
+}
+.paciente{
+    margin-bottom: 50px;
+}
+#reset-button{
+    background-color: red;
+}
+.btn-form{
+    margin-bottom: 50px;
+    text-align: center;
+    padding: 10px;;
+}
+.btn-send{
+    margin-right: 10px;
+    padding: 10px;
+}
+.form-control{
+    margin: 5px;
+    line-height: 15px !important;
+}
+.personal-info{
+    width: 50%;
+    position: relative;
+    left: 25%;
+}
