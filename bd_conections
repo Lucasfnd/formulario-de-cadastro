@@ -1,0 +1,17 @@
+Um usuário deve conseguir cadastrar um novo paciente e editar um paciente existente mas não deve ser
+possível excluir um cadastro. O sistema deve garantir que não haja cadastros duplicados utilizando CPF como
+identificação única, caso este esteja preenchido (não obrigatório). O convênio deve ser selecionado em uma
+lista, buscando da tabela de convênios.
+O sistema deve garantir as validações pertinentes a cada tipo de dados, como por exemplo:
+CPF: número válido e único na base de dados
+Celular ou telefone fixo: ao menos um dos campos preenchido com número válido
+O sistema deve salvar os dados do paciente na seguinte base de dados SQL Server:
+
+endereço: db_sql.be3.co
+porta: 1515
+
+
+As credenciais para utilização são informadas no corpo do email. Gerar as procedures necessárias para o
+correto funcionamento do sistema.
+A especificação acima deve ser implementada completamente. Se quiser, você também pode acrescentar
+alguma funcionalidade legal e nos surpreender, seja criativo!
