@@ -7,6 +7,9 @@ CPF: número válido e único na base de dados
 Celular ou telefone fixo: ao menos um dos campos preenchido com número válido
 O sistema deve salvar os dados do paciente na seguinte base de dados SQL Server:
 
+DB1122
+lucas.fernandes
+ProcSeletivo#2020
 endereço: db_sql.be3.co
 porta: 1515
 
